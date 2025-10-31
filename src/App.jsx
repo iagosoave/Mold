@@ -5,25 +5,39 @@ import before2 from './before2.png';
 import after2 from './after2.png';
 import before3 from './before3.png';
 import after3 from './after3.png';
+import before4 from './before4.png';
+import after4 from './after4.png';
+import inspectionImg from './inspection.png';
+import moldImg from './mold.png';
+import waterImg from './water.png';
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Section 1 - Hero/About */}
-      <section className="relative px-6 py-40 md:py-48 bg-white">
+      <section className="relative px-6 py-40 md:py-52 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center space-y-8">
-            <div className="inline-flex items-center justify-center space-x-3 mb-2">
-              <div className="h-px w-12 bg-green-600"></div>
-              <div className="w-1.5 h-1.5 rounded-full bg-green-600"></div>
-              <div className="h-px w-12 bg-green-600"></div>
+          <div className="text-center space-y-10">
+            <div className="space-y-6">
+              <div className="inline-flex items-center justify-center space-x-3">
+                <div className="h-px w-16 bg-green-600"></div>
+                <div className="w-2 h-2 rounded-full bg-green-600"></div>
+                <div className="h-px w-16 bg-green-600"></div>
+              </div>
+              
+              <div className="space-y-4">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-green-600 tracking-tight">
+                  RELIABLE MOLD
+                </h1>
+                <div className="h-1 w-32 bg-green-600 mx-auto rounded-full"></div>
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-extralight text-gray-800 leading-tight tracking-tight max-w-3xl mx-auto">
+                Professional Mold & Water Damage Services
+              </h2>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extralight text-green-600 leading-tight tracking-tight">
-              Professional Mold &<br className="hidden md:block" /> Water Damage Services
-            </h1>
-            
-            <div className="pt-4">
+            <div className="pt-6">
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto font-light">
                 We're 20 years in the business doing mold inspections removals and water damage restoration. 
                 We're fully licensed and insured family owned we take pride in our work and most of the time 
@@ -32,15 +46,12 @@ export default function App() {
             </div>
           </div>
         </div>
-        
-        {/* Subtle decorative element */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-600/20 to-transparent"></div>
       </section>
 
       {/* Section 2 - Services */}
-      <section className="px-6 py-32 md:py-40 bg-green-600">
+      <section className="px-6 py-20 md:py-28 bg-green-600">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-20 text-center">
+          <div className="mb-16 text-center">
             <div className="mb-6 flex justify-center">
               <div className="h-px w-20 bg-white"></div>
             </div>
@@ -49,151 +60,135 @@ export default function App() {
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-6">
             {/* Service 1 */}
-            <div className="group relative bg-white p-12 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-black/10 hover:-translate-y-2 cursor-pointer overflow-hidden">
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-              
-              <div className="relative flex flex-col">
-                <div className="mb-10">
-                  <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-green-600/20">
-                    <svg className="w-8 h-8 text-white transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                    </svg>
+            <div className="group relative bg-white rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] cursor-pointer overflow-hidden">
+              <div className="flex flex-col md:flex-row items-center">
+                {/* Image */}
+                <div className="w-full md:w-2/5 lg:w-1/3 bg-green-50 flex items-center justify-center p-8 md:p-10">
+                  <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                    <img src={inspectionImg} alt="Mold Inspection" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />
                   </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight leading-snug">
-                  Mold Inspection
-                </h3>
+                {/* Content */}
+                <div className="flex-1 p-8 md:p-10">
+                  <h3 className="text-2xl md:text-3xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight mb-3">
+                    Mold Inspection
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                    Comprehensive mold inspection services to identify and assess mold issues in your property.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Service 2 */}
-            <div className="group relative bg-white p-12 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-black/10 hover:-translate-y-2 cursor-pointer overflow-hidden">
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-              
-              <div className="relative flex flex-col">
-                <div className="mb-10">
-                  <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-green-600/20">
-                    <svg className="w-8 h-8 text-white transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                    </svg>
+            <div className="group relative bg-white rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] cursor-pointer overflow-hidden">
+              <div className="flex flex-col md:flex-row-reverse items-center">
+                {/* Image */}
+                <div className="w-full md:w-2/5 lg:w-1/3 bg-green-50 flex items-center justify-center p-8 md:p-10">
+                  <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                    <img src={moldImg} alt="Mold Removal" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />
                   </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight leading-snug">
-                  Mold Removal
-                </h3>
+                {/* Content */}
+                <div className="flex-1 p-8 md:p-10">
+                  <h3 className="text-2xl md:text-3xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight mb-3">
+                    Mold Removal
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                    Professional mold removal and remediation to ensure a safe and healthy environment.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Service 3 */}
-            <div className="group relative bg-white p-12 rounded-3xl transition-all duration-300 hover:shadow-2xl hover:shadow-black/10 hover:-translate-y-2 cursor-pointer overflow-hidden">
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-              
-              <div className="relative flex flex-col">
-                <div className="mb-10">
-                  <div className="w-16 h-16 rounded-2xl bg-green-600 flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-green-600/20">
-                    <svg className="w-8 h-8 text-white transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="1.5">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
+            <div className="group relative bg-white rounded-2xl transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] cursor-pointer overflow-hidden">
+              <div className="flex flex-col md:flex-row items-center">
+                {/* Image */}
+                <div className="w-full md:w-2/5 lg:w-1/3 bg-green-50 flex items-center justify-center p-8 md:p-10">
+                  <div className="w-32 h-32 md:w-40 md:h-40 relative">
+                    <img src={waterImg} alt="Water Damage Restoration" className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />
                   </div>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight leading-snug">
-                  Water Damage Restoration
-                </h3>
+                {/* Content */}
+                <div className="flex-1 p-8 md:p-10">
+                  <h3 className="text-2xl md:text-3xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight mb-3">
+                    Water Damage Restoration
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                    Expert water damage restoration services to restore your property to its original condition.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3 - Before & After */}
-      <section className="px-6 py-32 md:py-40 bg-white">
+      {/* Section 3 - Before Gallery */}
+      <section className="px-6 py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="mb-20 text-center">
-            <div className="mb-6 flex justify-center">
+          <div className="mb-12 text-center">
+            <div className="mb-4 flex justify-center">
               <div className="h-px w-20 bg-green-600"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-light text-green-600 tracking-tight">
-              Before & After
+            <h2 className="text-3xl md:text-4xl font-light text-green-600 tracking-tight">
+              Before Treatment
             </h2>
+            <p className="text-sm md:text-base text-gray-600 mt-2">Examples of damage we've encountered</p>
           </div>
 
-          <div className="space-y-12">
-            {/* Pair 1 */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Before */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={before1} alt="Before 1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 left-4 bg-gray-900/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <p className="text-white text-sm font-light tracking-wider">BEFORE</p>
-                  </div>
-                </div>
-                {/* After */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={after1} alt="After 1" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 right-4 bg-green-600 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-white text-sm font-light tracking-wider">AFTER</p>
-                  </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Before 1 */}
+            <div className="group relative overflow-hidden rounded-xl bg-gray-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-200">
+              <div className="relative">
+                <img src={before1} alt="Before 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-block bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    BEFORE
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Pair 2 */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Before */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={before2} alt="Before 2" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 left-4 bg-gray-900/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <p className="text-white text-sm font-light tracking-wider">BEFORE</p>
-                  </div>
-                </div>
-                {/* After */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={after2} alt="After 2" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 right-4 bg-green-600 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-white text-sm font-light tracking-wider">AFTER</p>
-                  </div>
+            {/* Before 2 */}
+            <div className="group relative overflow-hidden rounded-xl bg-gray-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-200">
+              <div className="relative">
+                <img src={before2} alt="Before 2" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-block bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    BEFORE
+                  </span>
                 </div>
               </div>
             </div>
 
-            {/* Pair 3 */}
-            <div className="group relative overflow-hidden rounded-3xl bg-gray-100 hover:shadow-2xl transition-all duration-500">
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Before */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={before3} alt="Before 3" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 left-4 bg-gray-900/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <p className="text-white text-sm font-light tracking-wider">BEFORE</p>
-                  </div>
+            {/* Before 3 */}
+            <div className="group relative overflow-hidden rounded-xl bg-gray-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-200">
+              <div className="relative">
+                <img src={before3} alt="Before 3" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-block bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    BEFORE
+                  </span>
                 </div>
-                {/* After */}
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img src={after3} alt="After 3" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute top-4 right-4 bg-green-600 backdrop-blur-sm px-4 py-2 rounded-full flex items-center space-x-2">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <p className="text-white text-sm font-light tracking-wider">AFTER</p>
-                  </div>
+              </div>
+            </div>
+
+            {/* Before 4 */}
+            <div className="group relative overflow-hidden rounded-xl bg-gray-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-200">
+              <div className="relative">
+                <img src={before4} alt="Before 4" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-block bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    BEFORE
+                  </span>
                 </div>
               </div>
             </div>
@@ -201,7 +196,88 @@ export default function App() {
         </div>
       </section>
 
-      {/* Section 4 - Contact */}
+      {/* Section 4 - After Gallery */}
+      <section className="px-6 py-16 md:py-24 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-12 text-center">
+            <div className="mb-4 flex justify-center">
+              <div className="h-px w-20 bg-green-600"></div>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-light text-green-600 tracking-tight">
+              After Treatment
+            </h2>
+            <p className="text-sm md:text-base text-gray-600 mt-2">Professional restoration results</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* After 1 */}
+            <div className="group relative overflow-hidden rounded-xl bg-green-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-200">
+              <div className="relative">
+                <img src={after1} alt="After 1" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    AFTER
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* After 2 */}
+            <div className="group relative overflow-hidden rounded-xl bg-green-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-200">
+              <div className="relative">
+                <img src={after2} alt="After 2" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    AFTER
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* After 3 */}
+            <div className="group relative overflow-hidden rounded-xl bg-green-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-200">
+              <div className="relative">
+                <img src={after3} alt="After 3" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    AFTER
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* After 4 */}
+            <div className="group relative overflow-hidden rounded-xl bg-green-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-green-200">
+              <div className="relative">
+                <img src={after4} alt="After 4" className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-3 left-3">
+                  <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    AFTER
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - Contact */}
       <section className="px-6 py-32 md:py-40 bg-green-600 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-5">
