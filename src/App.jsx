@@ -10,6 +10,8 @@ import after4 from './after4.png';
 import inspectionImg from './inspection.png';
 import moldImg from './mold.png';
 import waterImg from './water.png';
+// Importação para a imagem house.png (certifique-se de que o arquivo exista em src/)
+import houseImg from './house.png'; // <--- Nova importação para house.png
 
 export default function App() {
   return (
@@ -57,11 +59,34 @@ export default function App() {
                 have same day openings. We offer free estimates and mold inspections.
               </p>
             </div>
-
-           
           </div>
         </div>
       </section>
+
+      {/* --- FAIXA DE CTA APRIMORADA (com cores e fontes ajustadas) --- */}
+      <section className="bg-green-700 py-16 md:py-20 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-1/4 w-40 h-40 bg-white rounded-full mix-blend-overlay blur-xl animate-pulse"></div>
+          <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-white rounded-full mix-blend-overlay blur-xl animate-pulse delay-200"></div>
+        </div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <div className="flex items-center justify-center mb-6">
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-white"> {/* Adjusted font-weight */}
+              Free Inspection
+            </h2>
+          </div>
+          <p className="text-lg md:text-xl text-green-100 mb-8 max-w-2xl mx-auto font-light"> {/* Adjusted font-weight */}
+            Don't wait for mold or water damage to get worse. Get a professional assessment today.
+          </p>
+          <a 
+            href="tel:7867556455" 
+            className="inline-flex items-center px-8 py-4 bg-white text-green-800 font-bold text-xl rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+          >
+            Call Now: (786) 755-6455
+          </a>
+        </div>
+      </section>
+      {/* --- FIM DA FAIXA DE CTA APRIMORADA --- */}
 
       {/* Section 2 - Services */}
       <section className="px-6 py-20 md:py-28 bg-green-600">
@@ -76,7 +101,41 @@ export default function App() {
           </div>
           
           <div className="space-y-6">
-            {/* Service 1 */}
+
+            {/* --- NOVO SERVICE CARD: Seguradoras (com house.png) --- */}
+            <div className="group relative bg-white rounded-3xl transition-all duration-500 hover:shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative flex flex-col md:flex-row-reverse items-center"> {/* Use flex-row-reverse para a imagem ficar à direita */}
+                {/* Image Container */}
+                <div className="w-full md:w-1/2 lg:w-2/5 relative">
+                  <div className="aspect-square md:aspect-video lg:aspect-square p-12 md:p-16 flex items-center justify-center bg-gradient-to-bl from-green-50 to-white">
+                    <div className="relative w-full max-w-xs">
+                      {/* Decorative circle */}
+                      <div className="absolute inset-0 bg-green-100 rounded-full opacity-20 group-hover:scale-110 transition-transform duration-700"></div>
+                      <img 
+                        src={houseImg} // <--- Usando a imagem house.png
+                        alt="Home Insurance" 
+                        className="relative z-10 w-full h-full object-contain drop-shadow-2xl transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3" 
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="flex-1 p-8 md:p-12 lg:p-16">
+                  <h3 className="text-3xl md:text-4xl font-light text-gray-800 group-hover:text-green-600 transition-colors duration-300 tracking-tight mb-4">
+                    Insurance Accepted
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-base mb-4">
+                    Navigating insurance claims can be complex. We simplify the process by working directly with all major home owners insurance companies.
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* --- FIM DO NOVO SERVICE CARD --- */}
+
+            {/* Service 1 - Mold Inspection */}
             <div className="group relative bg-white rounded-3xl transition-all duration-500 hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -108,7 +167,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Service 2 */}
+            {/* Service 2 - Mold Removal */}
             <div className="group relative bg-white rounded-3xl transition-all duration-500 hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-l from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -140,7 +199,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Service 3 */}
+            {/* Service 3 - Water Damage Restoration */}
             <div className="group relative bg-white rounded-3xl transition-all duration-500 hover:shadow-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
@@ -265,9 +324,6 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-3 left-3">
                   <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
-                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
                     AFTER
                   </span>
                 </div>
@@ -281,9 +337,6 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-3 left-3">
                   <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
-                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
                     AFTER
                   </span>
                 </div>
@@ -297,9 +350,6 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-3 left-3">
                   <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
-                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
                     AFTER
                   </span>
                 </div>
@@ -313,9 +363,6 @@ export default function App() {
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-3 left-3">
                   <span className="inline-flex items-center bg-green-600 text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
-                    <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
                     AFTER
                   </span>
                 </div>
@@ -325,7 +372,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Section 5 - Contact */}
+      {/* Section 5 - Contact (Com SVGs) */}
       <section className="px-6 py-32 md:py-40 bg-green-600 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-5">
